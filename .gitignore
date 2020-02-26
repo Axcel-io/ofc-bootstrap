@@ -10,6 +10,8 @@ key.pub
 ofc-bootstrap-darwin
 ofc-bootstrap.exe
 init.yaml
+route53-secret-access-key
+private-key.pem
 main
 bin/
 config.json
