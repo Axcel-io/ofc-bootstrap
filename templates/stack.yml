@@ -13,6 +13,7 @@ functions:
       role: openfaas-system
       com.openfaas.scale.zero: false
     environment:
+      axcel_url: "https://console.axcel.io"
       validate_hmac: true
       write_debug: true
       read_debug: true
@@ -55,6 +56,7 @@ functions:
       role: openfaas-system
       com.openfaas.scale.zero: false
     environment:
+      axcel_url: "https://console.axcel.io"
       read_timeout: 15m
       write_timeout: 15m
       write_debug: true
@@ -126,6 +128,7 @@ functions:
       role: openfaas-system
       com.openfaas.scale.zero: false
     environment:
+      axcel_url: "https://console.axcel.io"
       write_debug: true
       read_debug: true
       combine_output: false
