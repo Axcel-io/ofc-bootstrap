@@ -1,3 +1,26 @@
+# configuring for Axcel
+
+create _buildshiprun_limits_changed.yml_ in template folder with configuration:
+
+```
+environment:
+  function_memory_limit_mb: 400   # The differences in formatting are handled by buildshiprun
+# https://kubernetes.io/docs/tasks/configure-pod-container/assign-cpu-resource/#specify-a-cpu-request-and-a-cpu-limit
+  function_cpu_requests_milli: 100        # Available on Kubernetes only, CPU in milliCPU
+  function_cpu_limit_milli: 500           # Available on Kubernetes only, CPU in milliCPU
+```
+
+change _buildshiprun_ section in _stack.yaml_ in templates folder as:
+
+```
+environment_file:
+   - ../../templates/buildshiprun_limits_changed.yml
+   - gateway_config.yml
+   - github.yml
+```
+
+
+
 # ofc-bootstrap user-guide
 
 You will need admin access to a Kubernetes cluster, some CLI tooling and a GitHub.com account or admin access to a self-hosted GitLab instance.
